@@ -1,2 +1,139 @@
 .header {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 7rem;
+  align-items: center;
+  display: flex;
+  padding: 0 4rem;
+  justify-content: space-between;
+  gap: 15rem;
+  z-index: 100;
+  border-bottom: 0.1rem solid #e6e6e6;
+
+  &.searchOpen {
+    gap: 4rem;
+  }
+
+  &-logo {
+    width: 11.6rem;
+    height: 3rem;
+    display: block;
+    transition-timing-function: cubic-bezier(1, -0.4, 0.35, 0.95);
+    transition: transform 0.2s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    svg {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-links {
+    color: #000;
+    font-family: "Rancer Body";
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.042rem;
+    gap: 2.4rem;
+    display: flex;
+
+    a {
+      transition-timing-function: cubic-bezier(1, -0.4, 0.35, 0.95);
+      transition: transform 0.2s;
+      cursor: pointer;
+      will-change: transform;
+      &:hover {
+        transform: scale(1.1);
+        font-weight: 600;
+      }
+    }
+
+    .router-link-active {
+      text-decoration: underline;
+      text-underline-offset: 0.25em;
+    }
+  }
+
+  &-search {
+    display: flex;
+    position: relative;
+    flex: 1;
+    width: 100%;
+    height: 3rem;
+
+    &.isOpen {
+      border-right: 0.1rem solid #e6e6e6;
+    }
+
+    svg {
+      position: absolute;
+      width: 2.4rem;
+      height: 2.4rem;
+      margin: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      cursor: pointer;
+
+      &:nth-of-type(2) {
+        left: unset;
+        right: 2.3rem;
+      }
+    }
+
+    input {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      left: 0;
+      color: #000;
+      font-family: "Rancer Body";
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+      border: none;
+      outline: none;
+      padding: 0;
+      padding-left: 3.4rem;
+      text-transform: uppercase;
+      height: max-content;
+      vertical-align: middle;
+      padding-top: 0.35rem;
+      width: 100%;
+      background-color: transparent;
+      cursor: pointer;
+      &:placeholder-shown,
+      &::placeholder {
+        color: #00000066;
+      }
+    }
+  }
+
+  &-actions {
+    display: flex;
+    gap: 1rem;
+
+    button,
+    a {
+      width: 2.4rem;
+      height: 2.4rem;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+    }
+  }
 }

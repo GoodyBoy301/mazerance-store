@@ -1,2 +1,98 @@
 .hero {
+  position: relative;
+  height: 100vh;
+
+  &-image {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    img {
+      object-position: 50% 25%;
+    }
+  }
+
+  &-fg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.2);
+    height: 32.4rem;
+    backdrop-filter: blur(0.2rem);
+    padding: 7.2rem 4rem;
+    flex-direction: column;
+
+    h1 {
+      color: #fff;
+      font-family: "Rancer Display";
+      font-size: 6.4rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      letter-spacing: -0.32rem;
+      width: 53rem;
+    }
+
+    p {
+      color: #fff;
+      font-family: "Rancer Body";
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.12rem;
+      margin-top: 1.6rem;
+    }
+
+    i {
+      position: absolute;
+      display: block;
+      width: 0.1rem;
+      height: 32.4rem;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    a {
+      position: absolute;
+      right: 3.6rem;
+      bottom: 7.6rem;
+      margin-left: auto;
+      display: flex;
+      padding: 1.8rem 1.6rem;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      background: #fff;
+      color: #000;
+      text-align: center;
+      font-family: "Rancer Display";
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.1rem;
+      clip-path: inset(0.4rem);
+      transition-timing-function: cubic-bezier(1, -0.4, 0.35, 0.95);
+      transition: clip-path 0.2s;
+      will-change: clip-path;
+      span {
+        will-change: transform;
+        transform: scale(1);
+        transition: transform 0.2s ease;
+      }
+      cursor: pointer;
+      &:hover {
+        clip-path: inset(0rem);
+        span {
+          transform: scale(0.975);
+        }
+      }
+    }
+  }
 }

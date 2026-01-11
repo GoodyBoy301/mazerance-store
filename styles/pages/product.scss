@@ -1,0 +1,131 @@
+.product {
+  min-height: 100vh;
+  padding: 13.6rem 4rem 9.6rem;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+
+  &-media {
+    width: 82rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    figure {
+      height: auto;
+      background: #f1f1f1;
+      border: 0.1rem solid #f1f1f1;
+      min-width: calc(50% - 0.5rem);
+      flex: 1;
+      & + figure {
+        max-width: calc(50% - 0.5rem);
+      }
+    }
+  }
+
+  &-details {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      align-self: stretch;
+      color: #000;
+      font-family: "Rancer Display";
+      font-size: 4rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      letter-spacing: -0.2rem;
+    }
+
+    h3 {
+      color: #000;
+      font-family: "Rancer Display";
+      font-size: 3.2rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      letter-spacing: -0.16rem;
+      margin-top: 2.4rem;
+    }
+
+    hr {
+      width: 52rem;
+      height: 0.1rem;
+      background: #e6e6e6;
+      border: 0;
+      margin: 2.4rem 0;
+    }
+
+    h4 {
+      align-self: stretch;
+      color: #000;
+      font-family: "Rancer Display";
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.1rem;
+    }
+
+    .colors {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 1.6rem;
+      div {
+        height: 10rem;
+        flex: 1 0 0;
+        background: #e6e6e6;
+      }
+    }
+
+    .sizes {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 1.6rem;
+      div {
+        height: 6.4rem;
+        flex: 1 0 0;
+        border: 0.1rem solid #e6e6e6;
+        display: grid;
+        place-content: center;
+        color: #000;
+        text-align: center;
+        font-family: "Rancer Display";
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: -0.1rem;
+      }
+    }
+
+    .ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+
+      button {
+        padding: 1.6rem 1.4rem;
+      }
+
+      span {
+        text-align: center;
+        font-family: "Rancer Display";
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.1rem;
+      }
+
+      .primary {
+        background: #000;
+        color: #fff;
+      }
+      .secondary {
+        background: #f2f2f2;
+        color: #000000;
+      }
+    }
+  }
+}

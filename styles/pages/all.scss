@@ -1,0 +1,255 @@
+.all {
+  position: relative;
+  padding-block: 15rem 8rem;
+  background: #fff;
+
+  &-heading {
+    align-self: stretch;
+    color: #000;
+    text-align: center;
+    font-family: "Rancer Display";
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -0.16rem;
+    display: flex;
+    margin: -0.4rem 3.6rem -0.4rem 4rem;
+    align-items: center;
+
+    button {
+      position: relative;
+      margin-left: auto;
+      display: flex;
+      padding: 1.8rem 1.6rem;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      background: #1e1e1e;
+      color: #fff;
+      text-align: center;
+      font-family: "Rancer Display";
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.1rem;
+      clip-path: inset(0.4rem);
+      transition-timing-function: cubic-bezier(1, -0.4, 0.35, 0.95);
+      transition: clip-path 0.2s;
+      will-change: clip-path;
+      span {
+        will-change: transform;
+        transform: scale(1);
+        transition: transform 0.2s ease;
+      }
+      cursor: pointer;
+      &:hover {
+        clip-path: inset(0rem);
+        span {
+          transform: scale(0.975);
+        }
+      }
+      svg {
+        margin: 0;
+      }
+    }
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 4rem 0;
+    border: 0.05rem solid var(--border-color);
+    --border-color: #e6e6e600;
+    min-height: 36rem;
+
+    &.isLoaded {
+      --border-color: #e6e6e6;
+    }
+
+    a {
+      border: 0.05rem solid var(--border-color);
+      background-color: #fff;
+      transition: filter 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      visibility: hidden;
+      &:hover {
+        filter: brightness(0.9);
+      }
+    }
+
+    figure {
+      margin: 3rem 2rem;
+      height: 32rem;
+      img {
+        object-fit: contain;
+      }
+    }
+
+    h3 {
+      color: #000;
+      text-align: center;
+      font-family: "Rancer Display";
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      letter-spacing: -0.12rem;
+      padding: 0 2rem;
+      margin-top: auto;
+    }
+
+    div {
+      display: flex;
+      margin: 0.8rem auto 2.4rem;
+      width: fit-content;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 0 2rem;
+    }
+
+    h4 {
+      color: #000;
+      text-align: center;
+      font-family: "Rancer Body";
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.048rem;
+      text-transform: uppercase;
+      opacity: 0.5;
+      white-space: nowrap; /* Required: Prevents text from wrapping */
+      overflow: hidden; /* Required: Hides the text outside the box */
+      text-overflow: ellipsis;
+      max-width: 16rem;
+    }
+
+    i {
+      width: 0.4rem;
+      height: 0.4rem;
+      aspect-ratio: 1/1;
+      background-color: #000;
+      display: block;
+      border-radius: 50%;
+      position: relative;
+      bottom: 0.16rem;
+    }
+
+    h5 {
+      color: #000;
+      text-align: center;
+      font-family: "Rancer Body";
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.048rem;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+  }
+
+  &-filter {
+    &-overlay {
+      position: absolute;
+      top: 24rem;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: flex-end;
+      z-index: 1000;
+      height: fit-content;
+    }
+
+    &-modal {
+      width: 36.05rem;
+      max-width: 400px;
+      height: 100%;
+      background: white;
+      padding: 2rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: relative;
+      border: 0.1rem solid #e6e6e6;
+
+      h3 {
+        color: #000;
+        font-family: "Rancer Body";
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.08rem;
+      }
+    }
+
+    &-section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    &-section h4 {
+      color: #000;
+      font-family: "Rancer Display";
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      letter-spacing: -0.048rem;
+    }
+
+    &-section select,
+    &-section input {
+      padding: 0.75rem;
+      border: 0.1rem solid #e0e0e0;
+      color: #000;
+      font-family: "Rancer Body";
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.08rem;
+    }
+
+    &-section select:focus,
+    &-section input:focus {
+      outline: none;
+      border-color: #1a1a1a;
+    }
+
+    &-save {
+      text-align: center;
+      font-family: "Rancer Display";
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.1rem;
+      background: #1e1e1e;
+      color: #fff;
+    }
+
+    &-clear {
+      background: #f0f0f0;
+      color: #1a1a1a;
+      border: none;
+      padding: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+    }
+
+    &-save:hover,
+    &-clear:hover {
+      opacity: 0.8;
+    }
+  }
+}

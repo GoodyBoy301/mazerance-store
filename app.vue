@@ -2,16 +2,17 @@
   <div class="app">
     <Header></Header>
     <NuxtPage></NuxtPage>
+    <RecentlyViewed />
     <Footer></Footer>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { LenisScroll } from "./interactions/base/scroll"
-import "./styles/index.scss"
+import { LenisScroll } from "./interactions/base/scroll";
+import "./styles/index.scss";
 
-const projName = ref("New website")
-const projDesc = ref("Bootstrapped with the Nuxt3 GoodyPlate")
+const projName = ref("New website");
+const projDesc = ref("Bootstrapped with the Nuxt3 GoodyPlate");
 
 const computedPageMeta = computed(() => {
   return {
@@ -27,12 +28,12 @@ const computedPageMeta = computed(() => {
       { hid: "twitter-description", property: "twitter:description", content: projDesc.value },
       { hid: "twitter-image", property: "twitter:image", content: "src" },
     ],
-  }
-})
+  };
+});
 
-useHead(computedPageMeta)
+useHead(computedPageMeta);
 
 onMounted(() => {
-  const scroll = new LenisScroll()
-})
+  const scroll = new LenisScroll();
+});
 </script>

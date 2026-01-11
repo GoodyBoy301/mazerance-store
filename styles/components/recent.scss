@@ -1,0 +1,166 @@
+.recent {
+  padding: 8rem 0;
+  background: #fff;
+  border-top: 0.1rem solid #e6e6e6;
+
+  @include media("<phone") {
+    padding: 60px 40px;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 4rem 4rem;
+  }
+
+  &-title {
+    color: #000;
+    text-align: center;
+    font-family: "Rancer Display";
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -0.16rem;
+  }
+
+  &-controls {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  &-nav-btn {
+    width: 40px;
+    height: 40px;
+    background: #222;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    padding: 0;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    &:hover:not(:disabled) {
+      background: #000;
+    }
+
+    &:disabled {
+      background: #f1f1f1;
+      color: #1e1e1e;
+    }
+  }
+
+  &-scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &-grid {
+    display: flex;
+    gap: 20px;
+    min-width: min-content;
+
+    @include media("<phone") {
+      gap: 30px;
+    }
+  }
+
+  &-item {
+    border: 0.05rem solid var(--border-color);
+    background-color: #fff;
+    transition: filter 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    &:hover {
+      filter: brightness(0.9);
+    }
+
+    figure {
+      margin: 3rem 2rem;
+      height: 32rem;
+      img {
+        object-fit: contain;
+      }
+    }
+
+    h3 {
+      color: #000;
+      text-align: center;
+      font-family: "Rancer Display";
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      letter-spacing: -0.12rem;
+      padding: 0 2rem;
+      margin-top: auto;
+    }
+
+    div {
+      display: flex;
+      margin: 0.8rem auto 2.4rem;
+      width: fit-content;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 0 2rem;
+    }
+
+    h4 {
+      color: #000;
+      text-align: center;
+      font-family: "Rancer Body";
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.048rem;
+      text-transform: uppercase;
+      opacity: 0.5;
+      white-space: nowrap; /* Required: Prevents text from wrapping */
+      overflow: hidden; /* Required: Hides the text outside the box */
+      text-overflow: ellipsis;
+      max-width: 16rem;
+    }
+
+    i {
+      width: 0.4rem;
+      height: 0.4rem;
+      aspect-ratio: 1/1;
+      background-color: #000;
+      display: block;
+      border-radius: 50%;
+      position: relative;
+      bottom: 0.16rem;
+    }
+
+    h5 {
+      color: #000;
+      text-align: center;
+      font-family: "Rancer Body";
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.048rem;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+  }
+}
